@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/upload.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Upload video</title>
+</head>
+<body>
+
+  <div class="topbar">
+    <a href="gallery.html">all</a>
+    <a href="playListGallery.ejs">Playlists</a>
+    <a href="upload.hrml">Upload</a>
+    <a href="legs.ejs">legs</a>
+    <a href="arms.ejs">arms</a>
+    <a href="abs.ejs">abs</a>
+    <a href="booty.ejs">booty</a>
+    <a href="fullbody.ejs"> full body </a>
+  </div>
+      <div class="container">
+        <h1>File Upload</h1>
+        <form id='form'>
+          <form action="/Public/upload" method="post" enctype="multipart/form-data">
+            <div class="input-group">
+              <label for="filename">File name: </label>
+              <input type="text" id = "filename" name ="filename" required>
+            </div>
+            <div class="input-group">
+                  <label for='video'>Select files</label>
+                  <input type="file" id="video" name="video" accept=".mp4" required>
+            </div>
+            <div class="input-group">
+              <label for="videoDescription">Description: </label>
+              <input type="text" id="Description" name="Description" required>
+            </div>
+            <div class = "input-group">
+              <select name= "select" id="category">
+                <option value ="" disabled selected>Select category</option> 
+                <option value="abs">Abs</option>
+                <option value="legs">Legs</option>
+                <option value="arms">Arms</option>
+                <option value="hips">Hips</option>
+                <option value="fullbody">Full body</option>
+                <option value="stretch">Stretch</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <button class="submit-btn" type='submit'>Upload</button>
+          </form>
+        </form>
+      </div>
+</body>
+</html>
